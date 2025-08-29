@@ -1,8 +1,8 @@
-import React from 'react';
 import { Users, Award, Target, Building2, GraduationCap, Briefcase, MapPin, Calendar } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
-const AboutUs = () => {
-  const leadership = [
+const leadership = [
     {
       name: "J. R. S Gaur",
       qualification: "Bachelor of Science",
@@ -28,6 +28,20 @@ const AboutUs = () => {
     "PNEUMACARE HEALTH PRIVATE LIMITED"
   ];
 
+const AboutUs = () => {
+  const pillRef = useRef()
+  const headSpanRef = useRef()
+  const headSpanRef1 = useRef()
+
+  useEffect(()=>{
+    gsap.from(pillRef.current,{
+      y:20,
+      opacity:0,
+      duration:1,
+      ease:"power2.out"
+    })
+  },[])
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-50 via-blue-50 to-indigo-50">
       {/* Hero Section */}
@@ -40,16 +54,16 @@ const AboutUs = () => {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sky-100 to-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6 shadow-lg">
+            <div ref={pillRef} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sky-100 to-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6 shadow-lg">
               <Building2 className="w-4 h-4 mr-2" />
-              <h5>About Our Company</h5>
+              <h5 >About Our Company</h5>
             </div>
             <h1 className="text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-8">
-              <span className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 bg-clip-text text-transparent">
+              <span ref={headSpanRef} className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 bg-clip-text text-transparent">
                 About
               </span>
               <br />
-              <span className="bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+              <span ref={headSpanRef1} className="bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
                 BIOCYTE Organics
               </span>
             </h1>

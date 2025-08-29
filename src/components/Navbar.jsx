@@ -73,7 +73,7 @@ const Navbar = () => {
 
                     <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/products" className="text-blue-500">Products & Services</a></li>
 
-                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/careers" className="text-blue-500">Careers</a></li>
+                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/career" className="text-blue-500">Careers</a></li>
 
                     <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/contact" className="text-blue-500">Contact</a></li>
 

@@ -14,20 +14,30 @@ function App() {
   useEffect(() => {
     gsap.from(hero1.current, {
       x: -600,
-      duration: 3,
+      duration: 2,
       opacity: 0
     })
 
-    gsap.from(box.current, {
+    const tl = gsap.timeline()
+
+    tl.from(box.current, {
       x: 600,
       duration: 3,
       opacity: 0,
     })
 
+    tl.to(box.current,{
+      rotate:-3,
+      duration:4,
+      repeat:-1,
+      yoyo:true,
+      ease:"linear"
+    })
+
     gsap.fromTo(
       box2.current,
       { y: -300, opacity: 0 },   // starting point
-      { y: 0, opacity: 1, duration: 2, ease: "bounce.out" } // ending point
+      { y: 0, opacity: 1, duration: 2, ease: "linear" } // ending point
     )
   }, [])
 
@@ -84,12 +94,12 @@ function App() {
         </div>
 
 
-        <div className="absolute top-78 right-26 w-28 h-28 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full opacity-25 animate-pulse shadow-lg"></div>
-        <div className="absolute top-[720px] right-29 w-16 h-16 bg-gradient-to-r from-cyan-300 to-sky-400 rounded-full opacity-30 animate-bounce animation-delay-2000"></div>
-        <div className="absolute top-4/6 right-2/6 w-36 h-36 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-25 animate-pulse animation-delay-1000 shadow-lg"></div>
+        <div className="absolute top-78 right-36 w-28 h-28 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full opacity-25 animate-pulse shadow-lg"></div>
+        <div className="absolute top-[720px] right-45 w-16 h-16 bg-gradient-to-r from-cyan-300 to-sky-400 rounded-full opacity-30 animate-bounce animation-delay-2000"></div>
+        <div className="absolute top-[650px] right-[780px] w-36 h-36 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-25 animate-pulse animation-delay-1000 shadow-lg"></div>
 
 
-        <div ref={box} className='flex flex-col gap-10 bg-blue-50 shadow-blue-200 shadow-2xl h-85 p-3 my-26 rounded-2xl scale-110 rotate-3 md:w-[550px] md:mx-auto sm:w-[550px] sm:mx-auto'>
+        <div ref={box} className='flex flex-col gap-10 bg-blue-50 shadow-blue-200 shadow-2xl h-85 p-3 my-26 rounded-2xl scale-120 rotate-3 md:w-[550px] md:mx-auto sm:w-[550px] sm:mx-auto'>
 
           <div className='flex gap-9'>
 

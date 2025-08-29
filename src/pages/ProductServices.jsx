@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Pill, Search, Filter, ChevronDown, Package, Beaker, Syringe, Droplets } from 'lucide-react';
+import { useState } from 'react';
+import { Pill, Search, Filter, ChevronDown, Package, Beaker, Syringe, Droplets, FlaskRound } from 'lucide-react';
 
 const ProductsServices = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -244,20 +244,80 @@ const ProductsServices = () => {
       composition: "CYPROHEPTADINE HCL-2 MG, TRICHOLINE CITRATE-275 MG",
       category: "syrups",
       type: "Appetite Stimulant"
+    },
+
+    // POWDERS
+    {
+      name: "DIOPROT PROTEIN POWDER",
+      composition: "MILK PROTEIN ENRICH WITH VITAMINS, MINERALS & TRACE AMINO ACID | CHOCOLATE & VANILLA FLAVOUR",
+      category: "powders",
+      type: "Nutritional Supplement"
+    },
+    {
+      name: "FIBREX",
+      composition: "FIBREX - 90 GM | FIBREX - 270 GM",
+      category: "powders",
+      type: "Digestive Health"
+    },
+    {
+      name: "SUPIPEP SACHET",
+      composition: "COLLAGEN PEPTIDE-10 GM, CALCIUM CARBONATE-500 MG, METHYLCOBALAMINE-100 MCG, VIT D₃ (CHOLECALCIFEROL)-50 I.U.",
+      category: "powders",
+      type: "Bone & Joint Health"
+    },
+    {
+      name: "LACTITOL + ISPAGHULA",
+      composition: "LACTITOL-10 GM + ISPAGHULA-3.5 GM HUSK POWDER IN EACH 15 GM SERVING",
+      category: "powders",
+      type: "Digestive Health"
     }
+
   ];
 
   const categories = [
     { id: 'all', name: 'All Products', icon: Package },
     { id: 'capsules', name: 'Capsules', icon: Pill },
     { id: 'injections', name: 'Injections', icon: Syringe },
-    { id: 'syrups', name: 'Syrups', icon: Droplets }
+    { id: 'syrups', name: 'Syrups', icon: Droplets },
+    { id: 'powders', name: 'Powders', icon: FlaskRound }
   ];
+
+  const equipments = [  
+    {
+      name: "NEBULIZERS",
+      description: "COMPRESSOR, ULTRASONIC",
+    },
+    {
+      name: "AERONAB-PRO",
+      description: "NEBULIZER FOR ANY VENTILATOR",
+    },
+    {
+      name: "PULSE OXIMETER",
+      description: "Device for measuring oxygen saturation",
+    },
+    {
+      name: "NON INVASIVE VENTILATORS",
+      description: "RESMED INDIA LTD",
+    },
+    {
+      name: "SLEEP SCREENING DEVICES",
+      description: "Devices for sleep apnea and screening",
+    },
+    {
+      name: "CPAP, BIPAP DEVICES",
+      description: "Devices for assisted breathing",
+    },
+    {
+      name: "OXYGEN CONCENTRATORS",
+      description: "Medical oxygen supply devices",
+    }
+  ];
+
 
   const filteredProducts = products.filter(product => {
     const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.composition.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.type.toLowerCase().includes(searchTerm.toLowerCase());
+      product.composition.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.type.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -288,7 +348,7 @@ const ProductsServices = () => {
               </span>
             </h1>
             <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto font-medium">
-              Comprehensive range of pharmaceutical products including capsules, injections, and syrups 
+              Comprehensive range of pharmaceutical products including capsules, injections, and syrups
               for various therapeutic areas and healthcare needs.
             </p>
           </div>
@@ -338,11 +398,10 @@ const ProductsServices = () => {
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:-translate-y-1 ${
-                      selectedCategory === category.id
-                        ? 'bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600 text-white shadow-lg'
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                    }`}
+                    className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:-translate-y-1 ${selectedCategory === category.id
+                      ? 'bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600 text-white shadow-lg'
+                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                      }`}
                   >
                     <IconComponent className="w-4 h-4" />
                     <span>{category.name}</span>
@@ -367,7 +426,7 @@ const ProductsServices = () => {
             {filteredProducts.map((product, index) => {
               const categoryInfo = categories.find(cat => cat.id === product.category);
               const IconComponent = categoryInfo?.icon || Package;
-              
+
               return (
                 <div
                   key={index}
@@ -382,24 +441,23 @@ const ProductsServices = () => {
                         {product.type}
                       </span>
                     </div>
-                    
+
                     <h3 className="text-2xl font-black text-slate-800 mb-4 group-hover:text-blue-600 transition-colors">
                       {product.name}
                     </h3>
-                    
+
                     <div className="mb-6">
                       <h4 className="text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Composition</h4>
                       <p className="text-slate-600 text-sm leading-relaxed font-medium">
                         {product.composition}
                       </p>
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
-                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${
-                        product.category === 'capsules' ? 'bg-blue-100 text-blue-800' :
+                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${product.category === 'capsules' ? 'bg-blue-100 text-blue-800' :
                         product.category === 'injections' ? 'bg-red-100 text-red-800' :
-                        'bg-green-100 text-green-800'
-                      }`}>
+                          'bg-green-100 text-green-800'
+                        }`}>
                         <IconComponent className="w-3 h-3 mr-1" />
                         {categoryInfo?.name}
                       </span>
@@ -431,38 +489,22 @@ const ProductsServices = () => {
           <div className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 rounded-3xl p-8 lg:p-12 text-white shadow-2xl shadow-blue-500/20">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-black mb-6 leading-tight">
-                Our Product Portfolio
+                Equipments
               </h2>
-              <p className="text-sky-100 text-lg font-medium leading-relaxed max-w-2xl mx-auto">
-                Comprehensive pharmaceutical solutions across multiple therapeutic categories.
-              </p>
+
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/30 shadow-xl">
-                  <div className="text-4xl font-black mb-2">{products.filter(p => p.category === 'capsules').length}+</div>
-                  <div className="text-sky-200 text-sm font-medium">Capsule Products</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/30 shadow-xl">
-                  <div className="text-4xl font-black mb-2">{products.filter(p => p.category === 'injections').length}+</div>
-                  <div className="text-sky-200 text-sm font-medium">Injectable Solutions</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/30 shadow-xl">
-                  <div className="text-4xl font-black mb-2">{products.filter(p => p.category === 'syrups').length}+</div>
-                  <div className="text-sky-200 text-sm font-medium">Syrup Formulations</div>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/30 shadow-xl">
-                  <div className="text-4xl font-black mb-2">{products.length}+</div>
-                  <div className="text-sky-200 text-sm font-medium">Total Products</div>
-                </div>
-              </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {equipments.map((m) => {
+                return (
+                  <div className="text-center">
+                    <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/30 shadow-xl">
+                        <div className="text-xl font-black mb-2">{m.name}</div>
+                        <div className="text-sky-200 text-sm font-medium">{m.description}</div>
+                    </div>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
