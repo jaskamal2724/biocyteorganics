@@ -77,11 +77,7 @@ const Navbar = () => {
 
                     <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/contact" className="text-blue-500">Contact</a></li>
 
-                    <li className="my-2">
-                        <a href="/quote" className="px-4 py-2 text-white bg-blue-600 rounded-lg md:flex hover:text-blue-600 hover:bg-white">
-                            Get Quote
-                        </a>
-                    </li>
+                    
                 </ul>
 
                 {/* mobile navigation hamburger */}
