@@ -120,9 +120,9 @@ const Contact = () => {
                   key={index}
                   className="group bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-white/50"
                 >
-                  <div className={`bg-gradient-to-r ${info.color} p-8 text-white`}>
+                  <div className={`bg-[#C9E4EE] p-8 text-slate-600`}>
                     <div className="bg-white/20 backdrop-blur-md p-4 rounded-2xl w-fit mb-4">
-                      <IconComponent className="w-12 h-12 text-white" />
+                      <IconComponent className="w-12 h-12 text-slate-500" />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{info.title}</h3>
                   </div>

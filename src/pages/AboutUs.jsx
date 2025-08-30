@@ -33,15 +33,6 @@ const AboutUs = () => {
   const headSpanRef = useRef()
   const headSpanRef1 = useRef()
 
-  useEffect(()=>{
-    gsap.from(pillRef.current,{
-      y:20,
-      opacity:0,
-      duration:1,
-      ease:"power2.out"
-    })
-  },[])
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-sky-50 via-blue-50 to-indigo-50">
       {/* Hero Section */}
