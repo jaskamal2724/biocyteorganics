@@ -108,7 +108,6 @@ const Navbar = () => {
                             <li className="text-center text-blue-500">About Us</li>
                             <li className="text-center text-blue-500">Contact Us</li>
                             <li className="text-center text-blue-500">Products & Services</li>
-                            <li className="text-center text-blue-500">Get Quote</li>
                         </ul>
                     </div>
                 </nav>
