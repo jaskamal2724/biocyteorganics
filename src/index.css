@@ -3,6 +3,7 @@
 html, body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;     /* Firefox */
+  background-color:#F8F3DE;
 }
 
 html::-webkit-scrollbar, 

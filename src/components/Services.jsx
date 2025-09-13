@@ -37,17 +37,17 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-sky-50 -my-18">
+    <section className="py-24 bg-[#F8F3DE] -my-18">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sky-100 to-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6 shadow-lg">
+          <div className="inline-flex items-center px-6 py-3 border-2 border-[#9F8310] text-[#FF0000] rounded-full text-sm font-semibold mb-6 shadow-lg">
             <Heart className="w-4 h-4 mr-2" />
             Healthcare Excellence
           </div>
           <h2 className="text-5xl font-black text-slate-800 mb-6 leading-tight">
             Our Healthcare Solutions
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl text-[#A28808] max-w-3xl mx-auto font-medium leading-relaxed">
             Providing comprehensive pharmaceutical services across Uttar Pradesh & Bihar with a focus on quality, 
             reliability, and innovative healthcare solutions.
           </p>
@@ -59,7 +59,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="group bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-white/50 lg:w-70 sm:w-[500px] sm:mx-auto"
+                className="group bg-[#F8F5DE] border-[#9F8310] backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border  lg:w-70 sm:w-[500px] sm:mx-auto"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -76,13 +76,13 @@ const Services = () => {
                 </div>
                 
                 <div className="p-8">
-                  <h3 className="text-xl font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-[#A28808] mb-4 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-slate-600 mb-6 leading-relaxed font-medium">
                     {service.description}
                   </p>
-                  <button className="flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:translate-x-2 transition-transform">
+                  <button className="flex items-center justify-center bg-[#FF0000] text-white hover:text-blue-700 p-2 rounded-xl font-semibold group-hover:translate-x-2 transition-transform">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </button>
@@ -93,10 +93,10 @@ const Services = () => {
         </div>
 
         {/* Business Territories */}
-        <div className="mt-24 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/10 p-8 lg:p-12 border border-white/50">
+        <div className="mt-24 bg-[#F8F5DE] backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/10 p-8 lg:p-12 border border-white/50">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-4xl font-black text-slate-800 mb-6 leading-tight">
+              <h3 className="text-4xl font-black text-[#9F8310] mb-6 leading-tight">
                 Our Business Territories
               </h3>
               <p className="text-lg text-slate-600 mb-8 font-medium leading-relaxed">
@@ -106,26 +106,26 @@ const Services = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-4 h-4 bg-gradient-to-r from-sky-500 to-blue-500 rounded-full shadow-lg"></div>
-                  <span className="text-slate-700 font-semibold">Uttar Pradesh - Complete Coverage</span>
+                  <div className="w-4 h-4 bg-[#9F8310] rounded-full shadow-lg"></div>
+                  <span className="text-[#FF0000] font-semibold">Uttar Pradesh - Complete Coverage</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full shadow-lg"></div>
-                  <span className="text-slate-700 font-semibold">Bihar - Comprehensive Services</span>
+                  <div className="w-4 h-4 bg-[#9F8310] rounded-full shadow-lg"></div>
+                  <span className="text-[#FF0000] font-semibold">Bihar - Comprehensive Services</span>
                 </div>
               </div>
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 rounded-3xl p-10 text-center shadow-xl border border-blue-200/50">
-                <div className="text-7xl font-black bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600 bg-clip-text text-transparent mb-4">
+              <div className="bg-[#F8F5DE] rounded-3xl p-10 text-center shadow-xl border border-[#9F8310]">
+                <div className="text-7xl font-black bg-clip-text text-[#9F8310] mb-4">
                   2
                 </div>
                 <p className="text-slate-700 font-bold text-lg">Major Business Territories</p>
-                <p className="text-slate-600 text-sm mt-2 font-medium">Serving millions of patients</p>
+                <p className="text-[#FF0000] text-sm mt-2 font-medium">Serving millions of patients</p>
               </div>
-              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-cyan-400 to-sky-500 rounded-full opacity-20 animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-20 animate-pulse animation-delay-1000"></div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-orange-300 to-orange-400 rounded-full opacity-20 animate-pulse"></div>
+              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-orange-300 to-orange-400 rounded-full opacity-20 animate-pulse animation-delay-1000"></div>
             </div>
           </div>
         </div>

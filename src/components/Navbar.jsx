@@ -47,35 +47,23 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="flex items-center justify-between p-4 shadow-md bg-blue-100">
+            <nav className="flex items-center justify-between p-4 shadow-md bg-[#F8F3DE]">
                 {/* Logo Section */}
                 <div className="flex gap-5">
-                    <div className='h-12 p-2 rounded-xl text-blue-500'>
-                        <svg ref={svgRef} xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
-                    </div>
-
-                    <div>
-                        <h1 className="text-xl font-bold text-blue-500">
-                            <span className="inline-block">B</span>
-                            <span className="inline-block">O</span>
-                            <span className="inline-block">P</span>
-                            <span className="inline-block">L</span>
-                        </h1>
-                        <h4 className="text-blue-500 text-sm ">Life · Health · Happiness</h4>
-                    </div>
+                    <img src="./logo.png" alt="" className="scale-70" />
                 </div>
 
                 {/* Navigation Links */}
                 <ul ref={navitems} className="md:flex space-x-6 font-medium hidden">
-                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/" className="text-blue-500">Home</a></li>
+                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/" className="text-slate-700">Home</a></li>
 
-                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/about" className="text-blue-500">About Us</a></li>
+                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/about" className="text-slate-700">About Us</a></li>
 
-                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/products" className="text-blue-500">Products & Services</a></li>
+                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/products" className="text-slate-700">Products & Services</a></li>
 
-                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/career" className="text-blue-500">Careers</a></li>
+                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/career" className="text-slate-700">Careers</a></li>
 
-                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/contact" className="text-blue-500">Contact</a></li>
+                    <li className="my-2 hover:bg-white px-2 py-2 rounded-xl"><a href="/contact" className="text-slate-700">Contact</a></li>
 
                     
                 </ul>
@@ -83,7 +71,7 @@ const Navbar = () => {
                 {/* mobile navigation hamburger */}
                 <div className="md:hidden">
                     {showMenu &&
-                        <div className="text-blue-500 cursor-pointer" onClick={() => setShowMenu(false)}>
+                        <div className="text-slate-700 cursor-pointer" onClick={() => setShowMenu(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16" /><path d="M4 18h16" /><path d="M4 6h16" /></svg>
                         </div>
                     }
@@ -104,10 +92,10 @@ const Navbar = () => {
                 <nav className="relative">
                     <div className="absolute top-5 w-full flex justify-center">
                         <ul className="flex flex-col gap-2 bg-[#f2f8f8] p-4 rounded-lg">
-                            <li className="text-center text-blue-500">Home</li>
-                            <li className="text-center text-blue-500">About Us</li>
-                            <li className="text-center text-blue-500">Contact Us</li>
-                            <li className="text-center text-blue-500">Products & Services</li>
+                            <li className="text-center text-slate-700">Home</li>
+                            <li className="text-center text-slate-700">About Us</li>
+                            <li className="text-center text-slate-700">Contact Us</li>
+                            <li className="text-center text-slate-700">Products & Services</li>
                         </ul>
                     </div>
                 </nav>

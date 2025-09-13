@@ -282,7 +282,7 @@ const ProductsServices = () => {
     { id: 'powders', name: 'Powders', icon: FlaskRound }
   ];
 
-  const equipments = [  
+  const equipments = [
     {
       name: "NEBULIZERS",
       description: "COMPRESSOR, ULTRASONIC",
@@ -323,31 +323,31 @@ const ProductsServices = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-sky-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-b from-[#F8F3DE] via-[#F8F5DE] to-[#FDFCF5]">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-sky-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-4000"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#FF2100]/30 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-[#9F8310]/30 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-[#A28808]/20 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sky-100 to-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6 shadow-lg">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#F8F5DE] to-[#F8F3DE] text-[#9F8310] rounded-full text-sm font-semibold mb-6 shadow-lg">
               <Package className="w-4 h-4 mr-2" />
               Pharmaceutical Products
             </div>
             <h1 className="text-6xl lg:text-7xl font-black leading-tight tracking-tight mb-8">
-              <span className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-orange-500 to-black bg-clip-text text-transparent">
                 Products &
               </span>
               <br />
-              <span className="bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#FF2100] via-[#D91B00] to-[#9F8310] bg-clip-text text-transparent">
                 Services
               </span>
             </h1>
-            <p className="text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto font-medium">
+            <p className="text-xl text-slate-700 leading-relaxed max-w-3xl mx-auto font-medium">
               Comprehensive range of pharmaceutical products including capsules, injections, and syrups
               for various therapeutic areas and healthcare needs.
             </p>
@@ -358,7 +358,7 @@ const ProductsServices = () => {
       {/* Search and Filter Section */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-blue-500/10 p-8 border border-white/50 mb-12">
+          <div className="bg-[#FDFCF5]/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-[#9F8310]/10 p-8 border border-[#EADFC4]/50 mb-12">
             <div className="grid md:grid-cols-2 gap-6">
               {/* Search */}
               <div className="relative">
@@ -368,7 +368,7 @@ const ProductsServices = () => {
                   placeholder="Search products by name, composition, or type..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-medium"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-[#EADFC4] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#9F8310] focus:border-transparent font-medium"
                 />
               </div>
 
@@ -378,7 +378,7 @@ const ProductsServices = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-medium appearance-none"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-50 border border-[#EADFC4] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FF2100] focus:border-transparent font-medium appearance-none"
                 >
                   {categories.map(category => (
                     <option key={category.id} value={category.id}>
@@ -399,8 +399,8 @@ const ProductsServices = () => {
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex items-center space-x-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-300 transform hover:-translate-y-1 ${selectedCategory === category.id
-                      ? 'bg-gradient-to-r from-sky-500 via-blue-500 to-indigo-600 text-white shadow-lg'
-                      : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        ? 'bg-gradient-to-r from-[#FF2100] via-[#D91B00] to-[#9F8310] text-white shadow-lg'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
                       }`}
                   >
                     <IconComponent className="w-4 h-4" />
@@ -417,7 +417,7 @@ const ProductsServices = () => {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <p className="text-slate-600 font-medium">
+            <p className="text-slate-700 font-medium">
               Showing {filteredProducts.length} of {products.length} products
             </p>
           </div>
@@ -430,19 +430,19 @@ const ProductsServices = () => {
               return (
                 <div
                   key={index}
-                  className="group bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-white/50"
+                  className="group bg-[#FDFCF5]/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl hover:shadow-[#9F8310]/20 transition-all duration-500 overflow-hidden transform hover:-translate-y-3 border border-[#EADFC4]/50"
                 >
                   <div className="p-8">
                     <div className="flex items-start justify-between mb-6">
-                      <div className="bg-gradient-to-br from-sky-100 to-blue-100 p-4 rounded-2xl shadow-lg group-hover:from-sky-200 group-hover:to-blue-200 transition-all duration-300">
-                        <IconComponent className="w-8 h-8 text-blue-600" />
+                      <div className="bg-gradient-to-br from-[#FFF6E6] to-[#F8F5DE] p-4 rounded-2xl shadow-lg group-hover:from-[#FFECD1] group-hover:to-[#F8F3DE] transition-all duration-300">
+                        <IconComponent className="w-8 h-8 text-[#9F8310]" />
                       </div>
-                      <span className="inline-block bg-gradient-to-r from-indigo-100 to-blue-100 text-indigo-800 text-xs px-3 py-1 rounded-full font-semibold">
+                      <span className="inline-block bg-gradient-to-r from-[#FFEFDB] to-[#FDFCF5] text-[#9F8310] text-xs px-3 py-1 rounded-full font-semibold">
                         {product.type}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl font-black text-slate-800 mb-4 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-2xl font-black text-slate-800 mb-4 group-hover:text-[#FF2100] transition-colors">
                       {product.name}
                     </h3>
 
@@ -454,14 +454,18 @@ const ProductsServices = () => {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${product.category === 'capsules' ? 'bg-blue-100 text-blue-800' :
-                        product.category === 'injections' ? 'bg-red-100 text-red-800' :
-                          'bg-green-100 text-green-800'
-                        }`}>
+                      <span
+                        className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${product.category === 'capsules'
+                            ? 'bg-[#FFF6E6] text-[#9F8310]'
+                            : product.category === 'injections'
+                              ? 'bg-red-100 text-red-800'
+                              : 'bg-amber-100 text-amber-800'
+                          }`}
+                      >
                         <IconComponent className="w-3 h-3 mr-1" />
                         {categoryInfo?.name}
                       </span>
-                      <button className="text-blue-600 hover:text-blue-700 font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                      <button className="text-[#FF2100] hover:text-[#D91B00] font-semibold text-sm group-hover:translate-x-1 transition-transform">
                         Learn More →
                       </button>
                     </div>
@@ -473,7 +477,7 @@ const ProductsServices = () => {
 
           {filteredProducts.length === 0 && (
             <div className="text-center py-16">
-              <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl p-12 border border-white/50 max-w-md mx-auto">
+              <div className="bg-[#FDFCF5]/90 backdrop-blur-xl rounded-3xl shadow-xl p-12 border border-[#EADFC4]/50 max-w-md mx-auto">
                 <Beaker className="w-16 h-16 text-slate-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-slate-800 mb-2">No Products Found</h3>
                 <p className="text-slate-600 font-medium">Try adjusting your search terms or filters.</p>
@@ -486,30 +490,30 @@ const ProductsServices = () => {
       {/* Stats Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-sky-600 via-blue-600 to-indigo-700 rounded-3xl p-8 lg:p-12 text-white shadow-2xl shadow-blue-500/20">
+          <div className="border border-[#9F8310] rounded-3xl p-8 lg:p-12 text-white shadow-2xl shadow-[#9F8310]/20">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-black mb-6 leading-tight">
+              <h2 className="text-4xl font-black mb-6 leading-tight text-[#A28808]">
                 Equipments
               </h2>
-
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {equipments.map((m) => {
                 return (
                   <div className="text-center">
-                    <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-white/30 shadow-xl">
-                        <div className="text-xl font-black mb-2">{m.name}</div>
-                        <div className="text-sky-200 text-sm font-medium">{m.description}</div>
+                    <div className="bg-white/15 backdrop-blur-md rounded-2xl p-6 border border-[#9F8310] shadow-xl">
+                      <div className="text-lg font-black mb-2 text-slate-700">{m.name}</div>
+                      <div className="text-[#FF0000] text-sm font-medium">{m.description}</div>
                     </div>
                   </div>
-                )
+                );
               })}
             </div>
           </div>
         </div>
       </section>
     </div>
+
   );
 };
 
